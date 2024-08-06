@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: food-service
+  namespace: app-space
+spec:
+  selector:
+    app: food-webapp
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: ClusterIP
+
